@@ -13,32 +13,31 @@ export default function StarfieldBackground() {
     if (!ctx) return;
 
     let animationFrameId: number;
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    let width = (canvas.width = window.innerWidth || 800);
+    let height = (canvas.height = window.innerHeight || 600);
 
     interface Star {
-      x: number;
-      y: number;
+      x: number; // Normalized coordinate [0, 1]
+      y: number; // Normalized coordinate [0, 1]
       size: number;
       opacity: number;
-      speedY: number;
-      speedX: number;
+      speedY: number; // Normalized speed
+      speedX: number; // Normalized speed
       twinkleSpeed: number;
     }
 
     const stars: Star[] = [];
-    // Calculate star density based on viewport size
-    const starCount = Math.min(Math.floor((width * height) / 14000), 120);
+    const starCount = 120; // Fixed count to ensure robust rendering regardless of initial load width
 
     for (let i = 0; i < starCount; i++) {
       stars.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        size: Math.random() * 1.4 + 0.6, // Defined dots: 0.6px to 2.0px
-        opacity: Math.random() * 0.6 + 0.3, // Brighter, clearly visible opacities
-        speedY: -(Math.random() * 0.10 + 0.03), // Drift upwards slowly
-        speedX: (Math.random() * 0.06 - 0.03), // Subtle sway
-        twinkleSpeed: Math.random() * 0.005 + 0.001, // Gentle twinkling
+        x: Math.random(),
+        y: Math.random(),
+        size: Math.random() * 1.4 + 0.6, // Star dot sizes: 0.6px to 2.0px
+        opacity: Math.random() * 0.6 + 0.3, // Brighter visual range
+        speedY: -(Math.random() * 0.0006 + 0.0002), // Gentle upward drift
+        speedX: (Math.random() * 0.0002 - 0.0001), // Very slight sway
+        twinkleSpeed: Math.random() * 0.005 + 0.001,
       });
     }
 
@@ -73,29 +72,34 @@ export default function StarfieldBackground() {
       for (let i = 0; i < stars.length; i++) {
         const star = stars[i];
 
+        // Update positions in normalized space
         star.y += star.speedY;
         star.x += star.speedX;
 
-        // Wrap particles when they float off the screen boundaries
+        // Wrap particles in normalized space
         if (star.y < 0) {
-          star.y = height;
-          star.x = Math.random() * width;
+          star.y = 1;
+          star.x = Math.random();
         }
         if (star.x < 0) {
-          star.x = width;
-        } else if (star.x > width) {
+          star.x = 1;
+        } else if (star.x > 1) {
           star.x = 0;
         }
 
         // Twinkle effect
         star.opacity += star.twinkleSpeed;
-        if (star.opacity > 0.8 || star.opacity < 0.05) {
+        if (star.opacity > 0.9 || star.opacity < 0.2) {
           star.twinkleSpeed = -star.twinkleSpeed;
         }
 
+        // Scale to current pixel dimensions
+        const pixelX = star.x * width;
+        const pixelY = star.y * height;
+
         // Offset positions slightly by scroll/mouse offsets
-        const drawX = (star.x - mouseX + width) % width;
-        const drawY = (star.y - mouseY + height) % height;
+        const drawX = (pixelX - mouseX + width) % width;
+        const drawY = (pixelY - mouseY + height) % height;
 
         ctx.globalAlpha = Math.max(0, Math.min(star.opacity, 1));
         ctx.beginPath();
@@ -118,7 +122,8 @@ export default function StarfieldBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-[#0a0a0a]"
+      className="fixed inset-0 w-full h-full pointer-events-none bg-transparent"
+      style={{ zIndex: 1 }}
     />
   );
 }
