@@ -66,7 +66,7 @@ export default function Preloader({ onRevealStart, onComplete }: PreloaderProps)
             className="absolute top-0 left-0 w-full h-[50vh] bg-[#0a0a0a] overflow-hidden pointer-events-auto border-b border-white/5"
           >
             <div className="absolute top-0 left-0 w-full h-[100vh] flex items-center justify-center">
-              <span className="font-anton uppercase text-[clamp(60px,10vw,120px)] text-[#fafafa] tracking-[0.15em] select-none">
+              <span className="font-anton uppercase text-[clamp(40px,12vw,120px)] text-[#fafafa] tracking-[0.05em] sm:tracking-[0.15em] select-none">
                 ABHINAV
               </span>
             </div>
@@ -84,7 +84,7 @@ export default function Preloader({ onRevealStart, onComplete }: PreloaderProps)
             className="absolute bottom-0 left-0 w-full h-[50vh] bg-[#0a0a0a] overflow-hidden pointer-events-auto border-t border-white/5"
           >
             <div className="absolute bottom-0 left-0 w-full h-[100vh] flex items-center justify-center">
-              <span className="font-anton uppercase text-[clamp(60px,10vw,120px)] text-[#fafafa] tracking-[0.15em] select-none">
+              <span className="font-anton uppercase text-[clamp(40px,12vw,120px)] text-[#fafafa] tracking-[0.05em] sm:tracking-[0.15em] select-none">
                 ABHINAV
               </span>
             </div>

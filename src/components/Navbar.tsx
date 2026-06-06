@@ -100,7 +100,7 @@ export default function Navbar() {
         </a>
 
         {/* Navigation Links */}
-        <nav className="flex items-center space-x-1 md:space-x-2">
+        <nav className="flex items-center space-x-1 md:space-x-2 overflow-x-auto no-scrollbar max-w-[calc(100vw-5rem)] mask-linear-fade">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -108,7 +108,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="relative px-3 py-1.5 md:px-4 md:py-2 text-sm font-medium transition-colors duration-300 text-white/60 hover:text-white"
+                className="relative px-2 py-1.5 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-[11px] sm:text-sm font-medium transition-colors duration-300 text-white/60 hover:text-white whitespace-nowrap shrink-0"
               >
                 <span className="relative z-10">{link.name}</span>
                 {isActive && (

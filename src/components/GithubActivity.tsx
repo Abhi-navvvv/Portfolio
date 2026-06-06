@@ -154,11 +154,11 @@ export default function GithubActivity() {
       </div>
 
       {/* Heatmap Area */}
-      <div className="glass-card rounded-xl p-6 md:p-8 mb-8 overflow-hidden">
+      <div className="glass-card rounded-xl p-4 sm:p-6 md:p-8 mb-8 w-full max-w-full overflow-hidden">
         {loading || error || !data ? (
           renderSkeletons()
         ) : (
-          <div className="overflow-x-auto no-scrollbar py-2">
+          <div className="w-full overflow-x-auto no-scrollbar py-2">
             <div className="grid grid-flow-col grid-rows-7 gap-[3px] min-w-[680px]">
               {data.contributions.map((day) => (
                 <div
@@ -188,20 +188,20 @@ export default function GithubActivity() {
       </div>
 
       {/* Stats Pills Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-mint-accent/20 transition-colors duration-300">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+        <div className="glass-card rounded-lg px-4 py-3 md:px-6 md:py-4 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-1 xl:gap-0 hover:border-mint-accent/20 transition-colors duration-300">
           <span className="text-[#666666] text-xs md:text-sm font-semibold">Total Contributions</span>
           <span className="font-anton text-lg md:text-xl text-mint-accent uppercase">
             {loading || error ? '—' : stats.total}
           </span>
         </div>
-        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-mint-accent/20 transition-colors duration-300">
+        <div className="glass-card rounded-lg px-4 py-3 md:px-6 md:py-4 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-1 xl:gap-0 hover:border-mint-accent/20 transition-colors duration-300">
           <span className="text-[#666666] text-xs md:text-sm font-semibold">Current Streak</span>
           <span className="font-anton text-lg md:text-xl text-mint-accent uppercase">
             {loading || error ? '—' : `${stats.currentStreak} days`}
           </span>
         </div>
-        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-mint-accent/20 transition-colors duration-300">
+        <div className="glass-card rounded-lg px-4 py-3 md:px-6 md:py-4 flex flex-col xl:flex-row justify-between items-start xl:items-center gap-1 xl:gap-0 hover:border-mint-accent/20 transition-colors duration-300">
           <span className="text-[#666666] text-xs md:text-sm font-semibold">Longest Streak</span>
           <span className="font-anton text-lg md:text-xl text-mint-accent uppercase">
             {loading || error ? '—' : `${stats.longestStreak} days`}
