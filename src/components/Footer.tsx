@@ -49,7 +49,7 @@ export default function Footer() {
             className="flex flex-row items-center gap-4 sm:gap-6 mt-10"
           >
             <a
-              href="mailto:abhiinavv.github@gmail.com"
+              href="mailto:abhinav2006singh@gmail.com"
               className="px-6 py-3 md:px-8 md:py-4 bg-mint-accent hover:bg-mint-hover text-[#0a0a0a] font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base cursor-pointer"
             >
               <Mail className="w-4 h-4" /> Send Email
