@@ -24,30 +24,30 @@ const certificationsData: Certification[] = [
     details: 'Elite + Silver Medal &mdash; Top 5% nationally',
     badge: 'Elite + Silver',
     status: 'Verified',
-    faviconDomain: 'iitkgp.ac.in',
-    link: 'https://nptel.ac.in',
+    faviconDomain: 'nptel.ac.in',
+    link: 'https://nptel.ac.in/noc/E_Certificate/NOC26CS34S76260031304329764',
   },
   {
-    id: 'ethereum-dev',
+    id: 'nptel2',
     featured: false,
-    title: 'Ethereum Developer Certification',
-    issuer: 'Alchemy University',
-    details: 'Advanced smart contract development, EVM mechanics, and security auditing.',
-    badge: 'In Progress',
-    status: 'In Progress',
-    faviconDomain: 'alchemy.com',
-    link: 'https://university.alchemy.com',
-  },
-  {
-    id: 'meta-front-end',
-    featured: false,
-    title: 'Meta Front-End Developer Professional Certificate',
-    issuer: 'Coursera &middot; Meta',
-    details: 'Building responsive, performant user interfaces and single page applications.',
+    title: 'Data Structure and Algorithm Designs',
+    issuer: 'NPTEL &middot; IIT Kanpur',
+    details: 'Proficiency in analyzing and designing algorithms for various computational problems',
     badge: 'Verified Professional',
     status: 'Verified',
-    faviconDomain: 'meta.com',
-    link: 'https://coursera.org',
+    faviconDomain: 'nptel.ac.in',
+    link: 'https://nptel.ac.in/noc/E_Certificate/NPTEL25CS81S46560166710326823',
+  },
+  {
+    id: 'google-OS',
+    featured: false,
+    title: 'Operating System and You',
+    issuer: 'Coursera &middot; Google',
+    details: 'Foundational understanding of operating system concepts and principles.',
+    badge: 'Verified Professional',
+    status: 'Verified',
+    faviconDomain: 'google.com',
+    link: 'https://www.coursera.org/account/accomplishments/certificate/KC9LT5419NAF',
   },
 ];
 
@@ -72,9 +72,8 @@ export default function Certifications() {
         {certificationsData.map((cert) => (
           <div
             key={cert.id}
-            className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-mint-accent/30 transition-all duration-300 relative ${
-              cert.featured ? 'border-t-2 border-t-mint-accent md:col-span-2' : ''
-            }`}
+            className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-mint-accent/30 transition-all duration-300 relative ${cert.featured ? 'border-t-2 border-t-mint-accent md:col-span-2' : ''
+              }`}
           >
             {/* Card Header: Favicon & Status */}
             <div className="flex justify-between items-center mb-6">
@@ -130,11 +129,10 @@ export default function Certifications() {
 
             {/* Footer */}
             <div className="flex justify-between items-center border-t border-white/5 pt-4">
-              <span className={`px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded ${
-                cert.status === 'Verified' 
-                  ? 'bg-mint-accent/15 text-mint-accent border border-mint-accent/20' 
-                  : 'bg-white/5 text-[#666666] border border-white/5'
-              }`}>
+              <span className={`px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded ${cert.status === 'Verified'
+                ? 'bg-mint-accent/15 text-mint-accent border border-mint-accent/20'
+                : 'bg-white/5 text-[#666666] border border-white/5'
+                }`}>
                 {cert.badge}
               </span>
 

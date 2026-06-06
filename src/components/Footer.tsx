@@ -55,7 +55,7 @@ export default function Footer() {
               <Mail className="w-4 h-4" /> Send Email
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/abhinav-singh2104/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 md:px-8 md:py-4 glass-card hover:bg-white/5 text-[#fafafa] font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
@@ -80,7 +80,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/abhinav-singh2104/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#666666] hover:text-[#fafafa] transition-colors duration-300 p-2 rounded-lg bg-white/5 border border-white/5 hover:border-mint-accent/20"
@@ -97,7 +97,7 @@ export default function Footer() {
         {/* Bottom Copyright Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-white/5 pt-8 text-xs md:text-sm text-[#666666]">
           <div className="text-center sm:text-left">
-            &copy; 2026 Abhii Navv &middot; Bennett University
+            &copy; 2026 Abhinav Singh &middot; Bennett University
           </div>
           <div className="text-center sm:text-right">
             Built with Next.js &amp; Framer Motion

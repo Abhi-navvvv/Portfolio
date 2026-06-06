@@ -29,7 +29,7 @@ const projectsData: Project[] = [
     description: 'Anonymous whistleblowing platform using zero-knowledge proofs for identity privacy.',
     links: {
       github: 'https://github.com/Abhi-navvvv/Zero-K-Whistleblower',
-      demo: '#',
+      demo: 'https://zero-k-whistleblower-reporter.vercel.app',
     },
   },
   {
@@ -40,7 +40,7 @@ const projectsData: Project[] = [
     tags: ['Solana', 'Rust', 'Anchor', 'TypeScript'],
     description: 'Decentralized uptime monitoring using Solana validators as truth sources.',
     links: {
-      github: 'https://github.com/Abhi-navvvv',
+      github: 'https://github.com/Aayx2hOG/sol-uptime',
     },
   },
   {
@@ -51,7 +51,7 @@ const projectsData: Project[] = [
     tags: ['Next.js 16', 'FastAPI', 'PyTorch', 'Web3'],
     description: 'AI-powered deepfake detector with decentralized verification layer.',
     links: {
-      github: 'https://github.com/Abhi-navvvv',
+      github: 'https://github.com/Aayx2hOG/Authentiq',
     },
   },
   {
@@ -62,8 +62,7 @@ const projectsData: Project[] = [
     tags: ['Solidity', 'Hardhat', 'OpenZeppelin'],
     description: 'Gas-optimized NFT collection with on-chain metadata.',
     links: {
-      github: 'https://github.com/Abhi-navvvv',
-      etherscan: 'https://etherscan.io',
+      github: 'https://github.com/Abhi-navvvv/ERC-721',
     },
   },
 ];
@@ -80,9 +79,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       animate={isInView ? { x: 0, opacity: 1 } : { x: isEven ? -60 : 60, opacity: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       whileHover={{ y: -4 }}
-      className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between relative transition-shadow duration-300 hover:shadow-xl hover:shadow-mint-accent/5 ${
-        project.featured ? 'border-t-2 border-t-mint-accent' : ''
-      }`}
+      className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between relative transition-shadow duration-300 hover:shadow-xl hover:shadow-mint-accent/5 ${project.featured ? 'border-t-2 border-t-mint-accent' : ''
+        }`}
     >
       <div>
         {/* Top Header Card */}
@@ -178,11 +176,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-1.5 text-xs md:text-sm font-semibold rounded-full border transition-all duration-300 cursor-pointer ${
-                filter === cat
-                  ? 'bg-mint-accent border-mint-accent text-[#0a0a0a] shadow-md shadow-mint-accent/20'
-                  : 'bg-[#1a1a1a] border-[#2a2a2a] text-[#666666] hover:text-[#fafafa] hover:border-[#666666]/30'
-              }`}
+              className={`px-4 py-1.5 text-xs md:text-sm font-semibold rounded-full border transition-all duration-300 cursor-pointer ${filter === cat
+                ? 'bg-mint-accent border-mint-accent text-[#0a0a0a] shadow-md shadow-mint-accent/20'
+                : 'bg-[#1a1a1a] border-[#2a2a2a] text-[#666666] hover:text-[#fafafa] hover:border-[#666666]/30'
+                }`}
             >
               {cat}
             </button>
