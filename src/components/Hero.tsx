@@ -107,31 +107,31 @@ export default function Hero() {
             {/* Draw outer, middle and inner hex networks */}
             <defs>
               <pattern id="dotPattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="1" fill="#59E3A7" fillOpacity="0.3" />
+                <circle cx="2" cy="2" r="1" fill="#00f050" fillOpacity="0.3" />
               </pattern>
             </defs>
 
             {/* Glowing Center */}
-            <circle cx="100" cy="100" r="12" fill="#59E3A7" className="blur-[4px]" fillOpacity="0.3" />
+            <circle cx="100" cy="100" r="12" fill="#00f050" className="blur-[4px]" fillOpacity="0.3" />
             <circle cx="100" cy="100" r="4" fill="#ffffff" fillOpacity="0.8" />
 
             {/* Inner Ring Hexagons */}
-            <polygon points="100,60 135,80 135,120 100,140 65,120 65,80" fill="none" stroke="#59E3A7" strokeWidth="0.75" strokeDasharray="3 3" />
+            <polygon points="100,60 135,80 135,120 100,140 65,120 65,80" fill="none" stroke="#00f050" strokeWidth="0.75" strokeDasharray="3 3" />
             <polygon points="100,40 152,70 152,130 100,160 48,130 48,70" fill="none" stroke="#ffffff" strokeWidth="0.5" strokeOpacity="0.5" />
-            <polygon points="100,20 169,60 169,140 100,180 31,140 31,60" fill="none" stroke="#59E3A7" strokeWidth="0.75" strokeOpacity="0.8" />
+            <polygon points="100,20 169,60 169,140 100,180 31,140 31,60" fill="none" stroke="#00f050" strokeWidth="0.75" strokeOpacity="0.8" />
 
             {/* Radial Lines connecting vertices */}
-            <line x1="100" y1="20" x2="100" y2="180" stroke="#59E3A7" strokeWidth="0.25" strokeOpacity="0.4" />
-            <line x1="31" y1="60" x2="169" y2="140" stroke="#59E3A7" strokeWidth="0.25" strokeOpacity="0.4" />
-            <line x1="31" y1="140" x2="169" y2="60" stroke="#59E3A7" strokeWidth="0.25" strokeOpacity="0.4" />
+            <line x1="100" y1="20" x2="100" y2="180" stroke="#00f050" strokeWidth="0.25" strokeOpacity="0.4" />
+            <line x1="31" y1="60" x2="169" y2="140" stroke="#00f050" strokeWidth="0.25" strokeOpacity="0.4" />
+            <line x1="31" y1="140" x2="169" y2="60" stroke="#00f050" strokeWidth="0.25" strokeOpacity="0.4" />
 
             {/* Decorative Orbiting Node Rings */}
             <circle cx="100" cy="20" r="3" fill="#ffffff" />
-            <circle cx="169" cy="60" r="2" fill="#59E3A7" />
+            <circle cx="169" cy="60" r="2" fill="#00f050" />
             <circle cx="169" cy="140" r="3" fill="#ffffff" />
-            <circle cx="100" cy="180" r="2" fill="#59E3A7" />
+            <circle cx="100" cy="180" r="2" fill="#00f050" />
             <circle cx="31" cy="140" r="3" fill="#ffffff" />
-            <circle cx="31" cy="60" r="2" fill="#59E3A7" />
+            <circle cx="31" cy="60" r="2" fill="#00f050" />
 
             {/* Additional abstract shapes inside */}
             <polygon points="100,75 122,87 122,113 100,125 78,113 78,87" fill="none" stroke="#ffffff" strokeWidth="0.5" strokeDasharray="2 1" />

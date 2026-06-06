@@ -4,8 +4,8 @@
   --font-anton: var(--font-anton);
   --font-sans: var(--font-roboto);
   --font-space: var(--font-anton); /* Fallback space to Anton */
-  --color-mint-accent: #59E3A7;
-  --color-mint-hover: #3ecf8e;
+  --color-mint-accent: #00f050;
+  --color-mint-hover: #00cc44;
   --color-dark-bg: #0a0a0a;
 }
 
@@ -89,7 +89,7 @@ html.lenis, html.lenis body {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(89, 227, 167, 0.06) 0%, rgba(89, 227, 167, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 240, 80, 0.06) 0%, rgba(0, 240, 80, 0) 70%);
   transform: translate(-50%, -50%);
   z-index: 9999;
 }
