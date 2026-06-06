@@ -5,7 +5,7 @@ import { ArrowUpRight, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0a0a0a] border-t border-[#2a2a2a] pt-24 pb-12 relative overflow-hidden">
+    <footer className="w-full bg-transparent border-t border-[#2a2a2a] pt-24 pb-12 relative overflow-hidden">
 
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">

@@ -34,11 +34,11 @@ export default function StarfieldBackground() {
       stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        size: Math.random() * 1.0 + 0.4, // Small classic dots: 0.4px to 1.4px
-        opacity: Math.random() * 0.5 + 0.1, // Soft, non-distracting opacities
-        speedY: -(Math.random() * 0.12 + 0.03), // Drift upwards slowly
-        speedX: (Math.random() * 0.08 - 0.04), // Subtle sway
-        twinkleSpeed: Math.random() * 0.006 + 0.002, // Gentle pulsing
+        size: Math.random() * 1.4 + 0.6, // Defined dots: 0.6px to 2.0px
+        opacity: Math.random() * 0.6 + 0.3, // Brighter, clearly visible opacities
+        speedY: -(Math.random() * 0.10 + 0.03), // Drift upwards slowly
+        speedX: (Math.random() * 0.06 - 0.03), // Subtle sway
+        twinkleSpeed: Math.random() * 0.005 + 0.001, // Gentle twinkling
       });
     }
 
@@ -118,7 +118,7 @@ export default function StarfieldBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full -z-50 pointer-events-none bg-[#0a0a0a]"
+      className="fixed inset-0 w-full h-full -z-10 pointer-events-none bg-[#0a0a0a]"
     />
   );
 }
