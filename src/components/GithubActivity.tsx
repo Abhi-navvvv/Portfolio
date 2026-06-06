@@ -94,11 +94,11 @@ export default function GithubActivity() {
   })();
 
   const getCellColor = (count: number) => {
-    if (count === 0) return 'bg-[#161b22]';
-    if (count <= 3) return 'bg-[#0e4429]';
-    if (count <= 6) return 'bg-[#006d32]';
-    if (count <= 9) return 'bg-[#26a641]';
-    return 'bg-[#39d353]';
+    if (count === 0) return 'bg-white/5';
+    if (count <= 3) return 'bg-mint-accent/20';
+    if (count <= 6) return 'bg-mint-accent/40';
+    if (count <= 9) return 'bg-mint-accent/70';
+    return 'bg-mint-accent';
   };
 
   // Generate skeletons for the shimmer view
@@ -107,7 +107,7 @@ export default function GithubActivity() {
       {Array.from({ length: 371 }).map((_, i) => (
         <div
           key={i}
-          className="w-[10px] h-[10px] rounded-[2px] bg-[#161b22] animate-pulse"
+          className="w-[10px] h-[10px] rounded-[2px] bg-white/5 animate-pulse"
           style={{
             animationDelay: `${(i % 7) * 50}ms`,
           }}
@@ -121,10 +121,10 @@ export default function GithubActivity() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div className="flex items-baseline gap-4">
-          <span className="font-space font-bold text-xl md:text-2xl text-violet-accent">02.</span>
+          <span className="font-anton text-xl md:text-2xl text-mint-accent">02.</span>
           <div>
-            <h2 className="font-space font-bold text-3xl md:text-5xl text-white">Coding Activity</h2>
-            <p className="text-white/60 text-xs md:text-sm mt-1 font-normal">
+            <h2 className="font-anton uppercase text-3xl md:text-5xl text-white">Coding Activity</h2>
+            <p className="text-[#666666] text-xs md:text-sm mt-1 font-normal">
               Contributions over the last year
             </p>
           </div>
@@ -141,10 +141,10 @@ export default function GithubActivity() {
             <button
               key={item.value}
               onClick={() => setYear(item.value)}
-              className={`px-4 py-1.5 text-xs md:text-sm font-medium rounded-full border transition-all duration-300 cursor-pointer ${
+              className={`px-4 py-1.5 text-xs md:text-sm font-semibold rounded-full border transition-all duration-300 cursor-pointer ${
                 year === item.value
-                  ? 'bg-violet-accent border-violet-accent text-white shadow-md shadow-violet-accent/20'
-                  : 'bg-white/5 border-white/5 text-white/60 hover:text-white hover:border-white/10'
+                  ? 'bg-mint-accent border-mint-accent text-[#0a0a0a] shadow-md shadow-mint-accent/20'
+                  : 'bg-[#1a1a1a] border-[#2a2a2a] text-[#666666] hover:text-[#fafafa] hover:border-white/10'
               }`}
             >
               {item.label}
@@ -175,13 +175,13 @@ export default function GithubActivity() {
 
         {/* Heatmap Legend */}
         {!loading && !error && (
-          <div className="flex justify-end items-center gap-2 mt-4 text-[10px] md:text-xs text-white/40">
+          <div className="flex justify-end items-center gap-2 mt-4 text-[10px] md:text-xs text-[#666666]">
             <span>Less</span>
-            <div className="w-[10px] h-[10px] rounded-[2px] bg-[#161b22]" />
-            <div className="w-[10px] h-[10px] rounded-[2px] bg-[#0e4429]" />
-            <div className="w-[10px] h-[10px] rounded-[2px] bg-[#006d32]" />
-            <div className="w-[10px] h-[10px] rounded-[2px] bg-[#26a641]" />
-            <div className="w-[10px] h-[10px] rounded-[2px] bg-[#39d353]" />
+            <div className="w-[10px] h-[10px] rounded-[2px] bg-white/5" />
+            <div className="w-[10px] h-[10px] rounded-[2px] bg-mint-accent/20" />
+            <div className="w-[10px] h-[10px] rounded-[2px] bg-mint-accent/40" />
+            <div className="w-[10px] h-[10px] rounded-[2px] bg-mint-accent/70" />
+            <div className="w-[10px] h-[10px] rounded-[2px] bg-mint-accent" />
             <span>More</span>
           </div>
         )}
@@ -189,21 +189,21 @@ export default function GithubActivity() {
 
       {/* Stats Pills Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-violet-accent/20 transition-colors duration-300">
-          <span className="text-white/60 text-xs md:text-sm font-medium">Total Contributions</span>
-          <span className="font-space font-bold text-lg md:text-xl text-violet-accent">
+        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-mint-accent/20 transition-colors duration-300">
+          <span className="text-[#666666] text-xs md:text-sm font-semibold">Total Contributions</span>
+          <span className="font-anton text-lg md:text-xl text-mint-accent uppercase">
             {loading || error ? '—' : stats.total}
           </span>
         </div>
-        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-violet-accent/20 transition-colors duration-300">
-          <span className="text-white/60 text-xs md:text-sm font-medium">Current Streak</span>
-          <span className="font-space font-bold text-lg md:text-xl text-violet-accent">
+        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-mint-accent/20 transition-colors duration-300">
+          <span className="text-[#666666] text-xs md:text-sm font-semibold">Current Streak</span>
+          <span className="font-anton text-lg md:text-xl text-mint-accent uppercase">
             {loading || error ? '—' : `${stats.currentStreak} days`}
           </span>
         </div>
-        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-violet-accent/20 transition-colors duration-300">
-          <span className="text-white/60 text-xs md:text-sm font-medium">Longest Streak</span>
-          <span className="font-space font-bold text-lg md:text-xl text-violet-accent">
+        <div className="glass-card rounded-lg px-6 py-4 flex justify-between items-center hover:border-mint-accent/20 transition-colors duration-300">
+          <span className="text-[#666666] text-xs md:text-sm font-semibold">Longest Streak</span>
+          <span className="font-anton text-lg md:text-xl text-mint-accent uppercase">
             {loading || error ? '—' : `${stats.longestStreak} days`}
           </span>
         </div>

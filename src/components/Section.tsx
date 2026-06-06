@@ -24,7 +24,7 @@ export default function Section({ id, className = '', children }: SectionProps) 
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
             style={{ originX: 0 }}
-            className="w-full h-[1px] bg-violet-accent"
+            className="w-full h-[1px] bg-mint-accent"
           />
         )}
       </div>

@@ -90,13 +90,13 @@ export default function Navbar() {
         <a
           href="#home"
           onClick={(e) => scrollToSection(e, '#home')}
-          className="group relative flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 hover:border-violet-accent/50 transition-all duration-300 bg-white/5"
+          className="group relative flex items-center justify-center w-10 h-10 rounded-lg border border-white/10 hover:border-mint-accent/50 transition-all duration-300 bg-white/5"
         >
-          <span className="font-space font-bold text-lg tracking-wider text-white group-hover:text-violet-accent transition-colors duration-300">
+          <span className="font-anton uppercase text-lg tracking-wider text-white group-hover:text-mint-accent transition-colors duration-300">
             AN
           </span>
           {/* Subtle Glow Behind Monogram */}
-          <span className="absolute inset-0 rounded-lg bg-violet-accent/0 group-hover:bg-violet-accent/5 transition-all duration-300 blur-sm -z-10" />
+          <span className="absolute inset-0 rounded-lg bg-mint-accent/0 group-hover:bg-mint-accent/5 transition-all duration-300 blur-sm -z-10" />
         </a>
 
         {/* Navigation Links */}
@@ -114,7 +114,7 @@ export default function Navbar() {
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-violet-accent"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-mint-accent"
                     transition={{
                       type: 'spring',
                       stiffness: 380,

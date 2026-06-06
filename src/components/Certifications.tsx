@@ -2,7 +2,6 @@
 
 import Section from './Section';
 import { Award, ExternalLink, ShieldCheck } from 'lucide-react';
-import Image from 'next/image';
 
 interface Certification {
   id: string;
@@ -57,12 +56,12 @@ export default function Certifications() {
     <Section id="certifications" className="max-w-7xl mx-auto px-6 md:px-12 py-16">
       {/* Header */}
       <div className="flex items-baseline gap-4 mb-12">
-        <span className="font-space font-bold text-xl md:text-2xl text-violet-accent">04.</span>
+        <span className="font-anton text-xl md:text-2xl text-mint-accent">04.</span>
         <div>
-          <h2 className="font-space font-bold text-3xl md:text-5xl text-white">
+          <h2 className="font-anton uppercase text-3xl md:text-5xl text-white">
             Certifications & Recognition
           </h2>
-          <p className="text-white/60 text-xs md:text-sm mt-1 font-normal">
+          <p className="text-[#666666] text-xs md:text-sm mt-1 font-normal">
             Validated expertise in blockchain infrastructure
           </p>
         </div>
@@ -73,8 +72,8 @@ export default function Certifications() {
         {certificationsData.map((cert) => (
           <div
             key={cert.id}
-            className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-violet-accent/30 transition-all duration-300 relative ${
-              cert.featured ? 'border-t-2 border-t-violet-accent md:col-span-2' : ''
+            className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between hover:border-mint-accent/30 transition-all duration-300 relative ${
+              cert.featured ? 'border-t-2 border-t-mint-accent md:col-span-2' : ''
             }`}
           >
             {/* Card Header: Favicon & Status */}
@@ -93,11 +92,11 @@ export default function Certifications() {
                       if (sibling) sibling.classList.remove('hidden');
                     }}
                   />
-                  <Award className="w-5 h-5 text-violet-accent hidden" />
+                  <Award className="w-5 h-5 text-mint-accent hidden" />
                 </div>
                 <div>
                   <h4
-                    className="font-space font-semibold text-white/90 text-sm md:text-base leading-tight"
+                    className="font-sans font-semibold text-[#fafafa]/90 text-sm md:text-base leading-tight"
                     dangerouslySetInnerHTML={{ __html: cert.issuer }}
                   />
                 </div>
@@ -119,12 +118,12 @@ export default function Certifications() {
 
             {/* Content */}
             <div className="mb-8">
-              <h3 className="font-space font-bold text-lg md:text-2xl text-white mb-2 leading-tight flex items-center gap-2">
+              <h3 className="font-anton uppercase text-lg md:text-2xl text-white mb-2 leading-tight flex items-center gap-2">
                 {cert.title}
-                {cert.featured && <span className="text-violet-accent text-sm">&middot; Featured</span>}
+                {cert.featured && <span className="text-mint-accent text-sm">&middot; Featured</span>}
               </h3>
               <p
-                className="text-white/60 text-sm md:text-base font-normal"
+                className="text-[#666666] text-sm md:text-base font-normal"
                 dangerouslySetInnerHTML={{ __html: cert.details }}
               />
             </div>
@@ -133,8 +132,8 @@ export default function Certifications() {
             <div className="flex justify-between items-center border-t border-white/5 pt-4">
               <span className={`px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded ${
                 cert.status === 'Verified' 
-                  ? 'bg-violet-accent/15 text-violet-accent border border-violet-accent/20' 
-                  : 'bg-white/5 text-white/40 border border-white/5'
+                  ? 'bg-mint-accent/15 text-mint-accent border border-mint-accent/20' 
+                  : 'bg-white/5 text-[#666666] border border-white/5'
               }`}>
                 {cert.badge}
               </span>
@@ -143,7 +142,7 @@ export default function Certifications() {
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-xs md:text-sm text-white/80 hover:text-violet-accent transition-colors duration-200 font-medium"
+                className="inline-flex items-center gap-1 text-xs md:text-sm text-[#fafafa]/80 hover:text-mint-accent transition-colors duration-200 font-semibold"
               >
                 Credential Link <ExternalLink className="w-3.5 h-3.5" />
               </a>

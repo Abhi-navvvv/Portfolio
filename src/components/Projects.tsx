@@ -80,25 +80,25 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       animate={isInView ? { x: 0, opacity: 1 } : { x: isEven ? -60 : 60, opacity: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       whileHover={{ y: -4 }}
-      className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between relative transition-shadow duration-300 hover:shadow-xl hover:shadow-violet-accent/5 ${
-        project.featured ? 'border-t-2 border-t-violet-accent' : ''
+      className={`glass-card rounded-xl p-6 md:p-8 flex flex-col justify-between relative transition-shadow duration-300 hover:shadow-xl hover:shadow-mint-accent/5 ${
+        project.featured ? 'border-t-2 border-t-mint-accent' : ''
       }`}
     >
       <div>
         {/* Top Header Card */}
         <div className="flex justify-between items-start mb-6">
-          <span className="font-space font-bold text-sm text-violet-accent">
+          <span className="font-anton text-sm text-mint-accent">
             {project.number}
           </span>
           {project.featured && (
-            <span className="px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-violet-accent/15 text-violet-accent border border-violet-accent/20">
+            <span className="px-2.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-mint-accent/15 text-mint-accent border border-mint-accent/20">
               Featured
             </span>
           )}
         </div>
 
         {/* Project Name */}
-        <h3 className="font-space font-bold text-2xl md:text-3xl text-white mb-3 hover:text-violet-accent transition-colors duration-300">
+        <h3 className="font-anton uppercase text-2xl md:text-3xl text-[#fafafa] mb-3 hover:text-mint-accent transition-colors duration-300">
           {project.title}
         </h3>
 
@@ -107,7 +107,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] md:text-xs font-mono font-medium text-white/40 bg-white/5 border border-white/5 px-2 py-0.5 rounded"
+              className="text-[10px] md:text-xs font-mono font-medium text-[#fafafa]/60 bg-white/5 border border-white/5 px-2 py-0.5 rounded"
             >
               {tag}
             </span>
@@ -115,7 +115,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
 
         {/* Description */}
-        <p className="text-white/60 text-sm md:text-base mb-8 leading-relaxed font-normal">
+        <p className="text-[#666666] text-sm md:text-base mb-8 leading-relaxed font-normal">
           {project.description}
         </p>
       </div>
@@ -127,7 +127,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             href={project.links.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs md:text-sm text-white hover:text-violet-accent font-medium transition-colors duration-200 flex items-center gap-1.5"
+            className="text-xs md:text-sm text-[#fafafa] hover:text-mint-accent font-semibold transition-colors duration-200 flex items-center gap-1.5"
           >
             GitHub <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
@@ -135,7 +135,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.links.demo && (
           <a
             href={project.links.demo}
-            className="text-xs md:text-sm text-white hover:text-violet-accent font-medium transition-colors duration-200 flex items-center gap-1.5"
+            className="text-xs md:text-sm text-[#fafafa] hover:text-mint-accent font-semibold transition-colors duration-200 flex items-center gap-1.5"
           >
             Live Demo <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
@@ -145,7 +145,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             href={project.links.etherscan}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs md:text-sm text-white hover:text-violet-accent font-medium transition-colors duration-200 flex items-center gap-1.5"
+            className="text-xs md:text-sm text-[#fafafa] hover:text-mint-accent font-semibold transition-colors duration-200 flex items-center gap-1.5"
           >
             Etherscan <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
@@ -168,8 +168,8 @@ export default function Projects() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div className="flex items-baseline gap-4">
-          <span className="font-space font-bold text-xl md:text-2xl text-violet-accent">03.</span>
-          <h2 className="font-space font-bold text-3xl md:text-5xl text-white">Projects</h2>
+          <span className="font-anton text-xl md:text-2xl text-mint-accent">03.</span>
+          <h2 className="font-anton uppercase text-3xl md:text-5xl text-white">Projects</h2>
         </div>
 
         {/* Filter bar */}
@@ -178,10 +178,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-1.5 text-xs md:text-sm font-medium rounded-full border transition-all duration-300 cursor-pointer ${
+              className={`px-4 py-1.5 text-xs md:text-sm font-semibold rounded-full border transition-all duration-300 cursor-pointer ${
                 filter === cat
-                  ? 'bg-violet-accent border-violet-accent text-white shadow-md shadow-violet-accent/20'
-                  : 'bg-white/5 border-white/5 text-white/60 hover:text-white hover:border-white/10'
+                  ? 'bg-mint-accent border-mint-accent text-[#0a0a0a] shadow-md shadow-mint-accent/20'
+                  : 'bg-[#1a1a1a] border-[#2a2a2a] text-[#666666] hover:text-[#fafafa] hover:border-[#666666]/30'
               }`}
             >
               {cat}

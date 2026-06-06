@@ -5,9 +5,9 @@ import { ArrowUpRight, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#050508] border-t border-white/5 pt-24 pb-12 relative overflow-hidden">
+    <footer className="w-full bg-[#0a0a0a] border-t border-[#2a2a2a] pt-24 pb-12 relative overflow-hidden">
       {/* Background radial accent */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-violet-accent/5 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-mint-accent/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Giant Hero CTA */}
@@ -17,7 +17,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="font-space font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white leading-none"
+            className="font-anton uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-white leading-none"
           >
             Let's build
           </motion.h2>
@@ -26,7 +26,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-space font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-violet-accent leading-none mt-2"
+            className="font-anton uppercase text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-mint-accent leading-none mt-2"
           >
             on-chain.
           </motion.h2>
@@ -36,7 +36,7 @@ export default function Footer() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-white/60 text-base sm:text-lg md:text-xl font-normal leading-relaxed mt-6 max-w-xl"
+            className="text-[#666666] text-base sm:text-lg md:text-xl font-normal leading-relaxed mt-6 max-w-xl"
           >
             Open to blockchain internships &middot; collaborations &middot; open source
           </motion.p>
@@ -51,7 +51,7 @@ export default function Footer() {
           >
             <a
               href="mailto:abhiinavv.github@gmail.com"
-              className="px-6 py-3 md:px-8 md:py-4 bg-violet-accent text-white font-medium rounded-lg hover:bg-violet-accent/90 transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base cursor-pointer"
+              className="px-6 py-3 md:px-8 md:py-4 bg-mint-accent hover:bg-mint-hover text-[#0a0a0a] font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base cursor-pointer"
             >
               <Mail className="w-4 h-4" /> Send Email
             </a>
@@ -59,9 +59,9 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 md:px-8 md:py-4 glass-card hover:bg-white/10 text-white font-medium rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
+              className="px-6 py-3 md:px-8 md:py-4 glass-card hover:bg-white/5 text-[#fafafa] font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
             >
-              LinkedIn <ArrowUpRight className="w-4 h-4 text-violet-accent" />
+              LinkedIn <ArrowUpRight className="w-4 h-4 text-mint-accent" />
             </a>
           </motion.div>
         </div>
@@ -72,7 +72,7 @@ export default function Footer() {
             href="https://github.com/Abhi-navvvv"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/40 hover:text-white transition-colors duration-300 p-2 rounded-lg bg-white/5 border border-white/5 hover:border-violet-accent/20"
+            className="text-[#666666] hover:text-[#fafafa] transition-colors duration-300 p-2 rounded-lg bg-white/5 border border-white/5 hover:border-mint-accent/20"
             title="GitHub"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -84,7 +84,7 @@ export default function Footer() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white/40 hover:text-white transition-colors duration-300 p-2 rounded-lg bg-white/5 border border-white/5 hover:border-violet-accent/20"
+            className="text-[#666666] hover:text-[#fafafa] transition-colors duration-300 p-2 rounded-lg bg-white/5 border border-white/5 hover:border-mint-accent/20"
             title="LinkedIn"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-white/5 pt-8 text-xs md:text-sm text-white/40">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-white/5 pt-8 text-xs md:text-sm text-[#666666]">
           <div className="text-center sm:text-left">
             &copy; 2026 Abhii Navv &middot; Bennett University
           </div>

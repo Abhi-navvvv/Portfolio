@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Anton, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import CursorGlow from "@/components/CursorGlow";
 import ScrollProgress from "@/components/ScrollProgress";
 
-const inter = Inter({
-  variable: "--font-inter",
+const anton = Anton({
+  variable: "--font-anton",
+  weight: "400",
   subsets: ["latin"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const roboto = Roboto_Flex({
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
@@ -29,9 +30,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased dark`}
+      className={`${anton.variable} ${roboto.variable} antialiased dark`}
     >
-      <body className="min-h-screen bg-[#0a0a0f] text-white selection:bg-violet-accent/30 selection:text-white overflow-x-hidden">
+      <body className="min-h-screen bg-[#0a0a0a] text-[#fafafa] selection:bg-mint-accent/30 selection:text-white overflow-x-hidden">
         <LenisProvider>
           <ScrollProgress />
           <CursorGlow />
