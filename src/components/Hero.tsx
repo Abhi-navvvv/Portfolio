@@ -35,13 +35,11 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden pt-32 md:pt-40 pb-12"
     >
-      {/* Parallax Background Glows */}
+      {/* Parallax Background Grid */}
       <motion.div
         className="absolute inset-0 pointer-events-none -z-20"
         style={{ y: bgY }}
       >
-        <div className="absolute top-[10%] left-[5%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-mint-accent/5 blur-[80px] md:blur-[120px]" />
-        <div className="absolute bottom-[20%] right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-[#00c3ff]/5 blur-[80px] md:blur-[120px]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.01)_1px,transparent_1px)] [background-size:32px_32px] opacity-40" />
       </motion.div>
 
@@ -62,12 +60,12 @@ export default function Hero() {
 
           {/* Headline Line 2 */}
           <h1 className="font-anton uppercase text-5xl sm:text-6xl md:text-8xl tracking-tight text-white leading-none mb-6">
-            Abhii Navv
+            Abhinav Singh
           </h1>
 
           {/* Description Line 3 */}
           <p className="text-[#666666] text-base sm:text-lg md:text-xl font-normal leading-relaxed max-w-xl mb-10">
-            Building trustless systems &middot; B.Tech CS @ Bennett University
+            Building trustless systems &middot; B.Tech CSE @ Bennett University
           </p>
 
           {/* CTA Buttons */}

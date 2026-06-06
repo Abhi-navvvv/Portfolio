@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
-import CursorGlow from "@/components/CursorGlow";
+import StarfieldBackground from "@/components/StarfieldBackground";
 import ScrollProgress from "@/components/ScrollProgress";
 
 const anton = Anton({
@@ -17,8 +17,8 @@ const roboto = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "Abhii Navv | Blockchain & ZK Engineer",
-  description: "Portfolio of Abhii Navv, 2nd-year CS student at Bennett University specializing in blockchain infrastructure, ZK Proofs, DeFi protocols, and smart contracts.",
+  title: "Abhinav Singh | Blockchain & ZK Engineer",
+  description: "Portfolio of Abhinav Singh, 3rd-year CSE student at Bennett University specializing in blockchain infrastructure, ZK Proofs, DeFi protocols, and smart contracts.",
   keywords: ["Blockchain", "ZK Proofs", "Cryptography", "Solidity", "Rust", "Bennett University", "Developer Portfolio"],
 };
 
@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-[#0a0a0a] text-[#fafafa] selection:bg-mint-accent/30 selection:text-white overflow-x-hidden">
         <LenisProvider>
           <ScrollProgress />
-          <CursorGlow />
+          <StarfieldBackground />
           {children}
         </LenisProvider>
       </body>

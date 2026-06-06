@@ -22,7 +22,7 @@ export default function About() {
         {/* Left Column (60% equivalent) */}
         <div className="lg:col-span-7 flex flex-col justify-start space-y-6">
           <p className="text-[#fafafa] text-base md:text-lg leading-relaxed font-normal">
-            I build privacy-first decentralized systems &mdash; from ZK circuits in Circom to Solidity smart contracts. Currently a 2nd-year CS student at Bennett University, focused on blockchain infrastructure, DeFi protocols, and zero-knowledge proofs.
+            I build privacy-first decentralized systems &mdash; from ZK circuits in Circom to Solidity smart contracts. Currently a 3rd-year CSE student at Bennett University, focused on blockchain infrastructure, DeFi protocols, and zero-knowledge proofs.
           </p>
           <p className="text-[#666666] text-base md:text-lg leading-relaxed font-normal">
             Passionate about trustless execution, cryptography, and the mathematics that enable secure, censorship-resistant networks. I specialize in the EVM and Solana ecosystems, developing audited, gas-optimized contracts and user-friendly Web3 frontends.

@@ -6,8 +6,7 @@ import { ArrowUpRight, Mail } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="w-full bg-[#0a0a0a] border-t border-[#2a2a2a] pt-24 pb-12 relative overflow-hidden">
-      {/* Background radial accent */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-mint-accent/5 blur-[120px] pointer-events-none" />
+
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Giant Hero CTA */}
