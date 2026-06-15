@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Activity', href: '#activity', id: 'activity' },
   { name: 'Projects', href: '#projects', id: 'projects' },
   { name: 'Certifications', href: '#certifications', id: 'certifications' },
+  { name: 'Resume', href: '/resume.pdf', id: 'resume', external: true },
 ];
 
 export default function Navbar() {
@@ -107,7 +108,9 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                {...(link.external 
+                  ? { target: "_blank", rel: "noopener noreferrer" } 
+                  : { onClick: (e) => scrollToSection(e, link.href) })}
                 className="relative px-2 py-1.5 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-[11px] sm:text-sm font-medium transition-colors duration-300 text-white/60 hover:text-white whitespace-nowrap shrink-0"
               >
                 <span className="relative z-10">{link.name}</span>

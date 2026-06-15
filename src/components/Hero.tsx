@@ -69,7 +69,7 @@ export default function Hero() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
+          <div className="flex flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto flex-wrap">
             <button
               onClick={scrollToProjects}
               className="px-6 py-3 md:px-8 md:py-4 bg-mint-accent hover:bg-mint-hover text-[#0a0a0a] font-bold rounded-lg transition-all duration-300 shadow-lg shadow-mint-accent/10 text-sm md:text-base cursor-pointer"
@@ -83,6 +83,14 @@ export default function Hero() {
               className="px-6 py-3 md:px-8 md:py-4 glass-card hover:bg-white/5 text-[#fafafa] font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
             >
               GitHub <ArrowUpRight className="w-4 h-4 text-mint-accent" />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 md:px-8 md:py-4 glass-card hover:bg-white/5 text-[#fafafa] font-semibold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base"
+            >
+              Resume <ArrowUpRight className="w-4 h-4 text-mint-accent" />
             </a>
           </div>
         </motion.div>
