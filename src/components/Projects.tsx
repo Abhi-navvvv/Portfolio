@@ -41,6 +41,7 @@ const projectsData: Project[] = [
     description: 'A verifiable DeFi portfolio agent running ML model inference inside the SP1 zero-knowledge virtual machine, generating Groth16 proofs of honest execution before executing on-chain trading.',
     links: {
       github: 'https://github.com/Abhi-navvvv/zk-llm-agent',
+      demo: 'https://zk-llm-agent.vercel.app',
     },
   },
   {
