@@ -34,6 +34,17 @@ const projectsData: Project[] = [
   },
   {
     number: '_02.',
+    title: 'ZK-LLM-Agent',
+    featured: true,
+    categories: ['ZK', 'EVM', 'Fullstack'],
+    tags: ['Rust', 'SP1 zkVM', 'Solidity', 'Next.js 16', 'Foundry'],
+    description: 'A verifiable DeFi portfolio agent running ML model inference inside the SP1 zero-knowledge virtual machine, generating Groth16 proofs of honest execution before executing on-chain trading.',
+    links: {
+      github: 'https://github.com/Abhi-navvvv/zk-llm-agent',
+    },
+  },
+  {
+    number: '_03.',
     title: 'Sol-Uptime',
     featured: false,
     categories: ['Solana'],
@@ -41,17 +52,6 @@ const projectsData: Project[] = [
     description: 'Decentralized uptime monitoring using Solana validators as truth sources.',
     links: {
       github: 'https://github.com/Aayx2hOG/sol-uptime',
-    },
-  },
-  {
-    number: '_03.',
-    title: 'Authentiq',
-    featured: false,
-    categories: ['Fullstack'],
-    tags: ['Next.js 16', 'FastAPI', 'PyTorch', 'Web3'],
-    description: 'AI-powered deepfake detector with decentralized verification layer.',
-    links: {
-      github: 'https://github.com/Aayx2hOG/Authentiq',
     },
   },
   {
