@@ -4,6 +4,7 @@ import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import StarfieldBackground from "@/components/StarfieldBackground";
 import ScrollProgress from "@/components/ScrollProgress";
+import { Analytics } from "@vercel/analytics/next";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -40,6 +41,7 @@ export default function RootLayout({
             {children}
           </div>
         </LenisProvider>
+        <Analytics />
       </body>
     </html>
   );
